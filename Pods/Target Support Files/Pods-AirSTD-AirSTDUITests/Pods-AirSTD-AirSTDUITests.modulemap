@@ -1,0 +1,6 @@
+framework module Pods_AirSTD_AirSTDUITests {
+  umbrella header "Pods-AirSTD-AirSTDUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

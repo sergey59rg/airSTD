@@ -1,0 +1,147 @@
+{
+  "images" : [
+    {
+      "filename" : "44@2x 1.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "22x22"
+    },
+    {
+      "filename" : "24@2x.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "24x24"
+    },
+    {
+      "filename" : "27@2x.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "27.5x27.5"
+    },
+    {
+      "filename" : "29@2x.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "29x29"
+    },
+    {
+      "filename" : "60@2x .png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "30x30"
+    },
+    {
+      "filename" : "64@2x.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "32x32"
+    },
+    {
+      "filename" : "33@2x.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "33x33"
+    },
+    {
+      "filename" : "40@2x.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "40x40"
+    },
+    {
+      "filename" : "87@2x.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "43.5x43.5"
+    },
+    {
+      "filename" : "44@2x.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "44x44"
+    },
+    {
+      "filename" : "46@2x.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "46x46"
+    },
+    {
+      "filename" : "50@2x.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "50x50"
+    },
+    {
+      "filename" : "51@2x.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "51x51"
+    },
+    {
+      "filename" : "108@2x 1.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "54x54"
+    },
+    {
+      "filename" : "86@2x.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "86x86"
+    },
+    {
+      "filename" : "98@2x.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "98x98"
+    },
+    {
+      "filename" : "108@2x.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "108x108"
+    },
+    {
+      "filename" : "117@2x.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "117x117"
+    },
+    {
+      "filename" : "258@2x.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "129x129"
+    },
+    {
+      "filename" : "1024@1x.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "size" : "1024x1024"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

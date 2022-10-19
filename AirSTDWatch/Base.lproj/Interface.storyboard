@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="21225" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cDx-Uo-VLg">
+    <device id="watch38"/>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="21040"/>
+    </dependencies>
+    <scenes>
+        <!--Search-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="Search" id="AgC-eL-Hgc" customClass="SearchInterfaceController" customModule="AirSTDWatch" customModuleProvider="target">
+                    <items>
+                        <imageView width="30" height="30" alignment="center" verticalAlignment="center" image="Activity" animationDuration="1" id="KX7-tL-rUz"/>
+                        <label alignment="center" text="Title" id="2dg-Dw-dul">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                        </label>
+                        <table alignment="left" id="zV4-5P-JyK">
+                            <items>
+                                <tableRow identifier="DeviceRowType" id="zoN-Ti-qa1" customClass="DeviceRowController" customModule="AirSTDWatch_Extension">
+                                    <group key="rootItem" width="1" alignment="left" layout="vertical" id="bJc-vl-ePN">
+                                        <items>
+                                            <label alignment="left" text="Name" id="Swl-e7-1QU">
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                            </label>
+                                            <label alignment="left" text="Detail" id="SiW-2o-SAH">
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="detailLabel" destination="SiW-2o-SAH" id="11h-hg-XPZ"/>
+                                        <outlet property="nameLabel" destination="Swl-e7-1QU" id="WQH-at-gqb"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <label alignment="center" verticalAlignment="bottom" text="Status" id="xPp-yn-bkd">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="devicesTable" destination="zV4-5P-JyK" id="LY1-1W-ziE"/>
+                        <outlet property="imageLoading" destination="KX7-tL-rUz" id="oTA-zC-X6g"/>
+                        <outlet property="statusLabel" destination="xPp-yn-bkd" id="LVt-V1-nmh"/>
+                        <outlet property="titleLabel" destination="2dg-Dw-dul" id="k9Q-8x-IMR"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="-44"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="ElF-Ae-jRE">
+            <objects>
+                <controller identifier="Settings" id="b3E-Vz-kUV" customClass="SettingsInterfaceController" customModule="AirSTDWatch" customModuleProvider="target">
+                    <items>
+                        <label alignment="center" text="Title" id="GYa-sV-BxT">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                        </label>
+                        <table alignment="left" id="mvO-tM-dfh">
+                            <items>
+                                <tableRow identifier="DeviceRowType" id="kVP-HA-MZi" customClass="DeviceRowController" customModule="AirSTDWatch_Extension">
+                                    <group key="rootItem" width="1" alignment="left" layout="vertical" id="HcC-tn-6Nb">
+                                        <items>
+                                            <label alignment="left" text="Name" id="xQl-nz-H0f">
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                            </label>
+                                            <label alignment="left" text="Detail" id="yCy-l6-4p7">
+                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="detailLabel" destination="yCy-l6-4p7" id="3lm-Pj-RnP"/>
+                                        <outlet property="nameLabel" destination="xQl-nz-H0f" id="fc8-0y-mXh"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <button width="1" alignment="center" verticalAlignment="bottom" title="Disconnect" id="vdb-ZM-SVp">
+                            <fontDescription key="font" type="system" pointSize="14"/>
+                            <connections>
+                                <action selector="startButtonPressed" destination="b3E-Vz-kUV" id="enw-zs-mGR"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="devicesTable" destination="mvO-tM-dfh" id="pnq-TM-OBw"/>
+                        <outlet property="startButton" destination="vdb-ZM-SVp" id="2kK-0R-MWH"/>
+                        <outlet property="titleLabel" destination="GYa-sV-BxT" id="2Ap-yO-x8H"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="545" y="-44"/>
+        </scene>
+        <!--Device-->
+        <scene sceneID="YU7-JO-yyA">
+            <objects>
+                <controller identifier="Device" id="cDx-Uo-VLg" customClass="DeviceInterfaceController" customModule="AirSTDWatch" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" id="Jfa-0l-Jts">
+                            <items>
+                                <label height="18" alignment="left" text="Name" textAlignment="left" id="Dxb-dp-YPs">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                </label>
+                                <button alignment="right" backgroundImage="ic_gear_red" id="O3v-M1-XmQ">
+                                    <accessibilityTraits key="accessibilityTraits" image="YES"/>
+                                    <connections>
+                                        <action selector="iconImagePressed" destination="cDx-Uo-VLg" id="Ocm-8g-dtS"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="center" id="iar-Hf-5CG">
+                            <items>
+                                <group width="0.33000000000000002" alignment="center" layout="vertical" spacing="10" id="8UM-Vc-I0Y">
+                                    <items>
+                                        <label alignment="center" text="All" textAlignment="center" id="7EB-rR-cBQ"/>
+                                        <group width="1" alignment="left" layout="vertical" radius="20" id="2I8-Il-8ac">
+                                            <items>
+                                                <button width="1" alignment="center" title="+" id="F2b-ms-ZuG">
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="font" type="system" pointSize="35"/>
+                                                    <connections>
+                                                        <action selector="plusAllButtonPressed" destination="cDx-Uo-VLg" id="NqQ-Ds-bjb"/>
+                                                    </connections>
+                                                </button>
+                                                <separator alignment="left" id="e4Z-xe-R1l">
+                                                    <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </separator>
+                                                <button width="1" alignment="center" title="-" id="FaA-E9-LVj">
+                                                    <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="font" type="system" pointSize="35"/>
+                                                    <connections>
+                                                        <action selector="minusAllButtonPressed" destination="cDx-Uo-VLg" id="Lx9-we-2cp"/>
+                                                    </connections>
+                                                </button>
+                                            </items>
+                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </group>
+                                    </items>
+                                    <edgeInsets key="margins" left="5" right="5" top="0.0" bottom="0.0"/>
+                                </group>
+                                <group width="0.33000000000000002" alignment="center" layout="vertical" spacing="10" id="8sd-EL-7a7">
+                                    <items>
+                                        <label alignment="center" text="Front" textAlignment="center" id="rol-Rx-0lq"/>
+                                        <group width="1" alignment="left" layout="vertical" radius="20" id="PgY-dC-ang">
+                                            <items>
+                                                <button width="1" alignment="center" title="+" id="AKQ-7Q-Whu">
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="font" type="system" pointSize="35"/>
+                                                    <connections>
+                                                        <action selector="plusFrontButtonPressed" destination="cDx-Uo-VLg" id="dFe-Hp-Chw"/>
+                                                    </connections>
+                                                </button>
+                                                <separator alignment="left" id="d2a-ib-RXb">
+                                                    <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </separator>
+                                                <button width="1" alignment="center" title="-" id="78h-it-8m8">
+                                                    <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="font" type="system" pointSize="35"/>
+                                                    <connections>
+                                                        <action selector="minusFrontButtonPressed" destination="cDx-Uo-VLg" id="vsP-dl-IxM"/>
+                                                    </connections>
+                                                </button>
+                                            </items>
+                                            <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </group>
+                                    </items>
+                                    <edgeInsets key="margins" left="5" right="5" top="0.0" bottom="0.0"/>
+                                </group>
+                                <group width="0.33000000000000002" alignment="center" layout="vertical" spacing="10" id="YRN-A7-lem">
+                                    <items>
+                                        <label alignment="center" text="Rear" textAlignment="center" id="Lmi-ZK-TMg"/>
+                                        <group width="1" alignment="left" layout="vertical" radius="20" id="JKs-DS-AAi">
+                                            <items>
+                                                <button width="1" alignment="center" title="+" id="njQ-Y4-pBc">
+                                                    <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="font" type="system" pointSize="35"/>
+                                                    <connections>
+                                                        <action selector="plusRearButtonPressed" destination="cDx-Uo-VLg" id="nZv-wr-50C"/>
+                                                    </connections>
+                                                </button>
+                                                <separator alignment="left" id="dTg-pI-c4n">
+                                                    <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </separator>
+                                                <button width="1" alignment="center" title="-" id="fkK-Z5-bpV">
+                                                    <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="font" type="system" pointSize="35"/>
+                                                    <connections>
+                                                        <action selector="minusRearButtonPressed" destination="cDx-Uo-VLg" id="jfB-55-JdC"/>
+                                                    </connections>
+                                                </button>
+                                            </items>
+                                            <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </group>
+                                    </items>
+                                    <edgeInsets key="margins" left="5" right="5" top="0.0" bottom="0.0"/>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="iconImage" destination="O3v-M1-XmQ" id="WPi-vL-Je6"/>
+                        <outlet property="minusAllButton" destination="FaA-E9-LVj" id="EQP-e0-L5C"/>
+                        <outlet property="minusFrontButton" destination="78h-it-8m8" id="VaM-Qd-ZJB"/>
+                        <outlet property="minusRearButton" destination="fkK-Z5-bpV" id="Fja-XG-b6c"/>
+                        <outlet property="nameLabel" destination="Dxb-dp-YPs" id="5L1-4R-Ipv"/>
+                        <outlet property="plusAllButton" destination="F2b-ms-ZuG" id="Zxn-av-Pxp"/>
+                        <outlet property="plusFrontButton" destination="AKQ-7Q-Whu" id="UNg-BY-HcU"/>
+                        <outlet property="plusRearButton" destination="njQ-Y4-pBc" id="8aJ-pa-v2l"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="695"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="AirSTDWatch" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="545" y="695"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Activity" width="36" height="36"/>
+        <image name="ic_gear_red" width="22" height="22"/>
+    </resources>
+</document>

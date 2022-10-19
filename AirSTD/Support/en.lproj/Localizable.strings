@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  AirSTD
+
+  Created by Сергей on 19.09.2022.
+  Copyright © 2022 Sergey Zykov. All rights reserved.
+*/
+
+"all"           = "All";
+"left"          = "left";
+"front"         = "Front";
+"right"         = "right";
+"rear"          = "Rear";
+"search"        = "Searching for controller";
+"powerCar"      = "Power on your car";
+"settings"      = "Connected controller";
+"startScaner"   = "Disconnect and start scaner";
+"foundDevice"   = "Found controllers";
+"chooseDevice"  = "Choose one to connect";
+"error"         = "Error";
+"close"         = "Close";
+"errorConnect"  = "Device is not connected";
