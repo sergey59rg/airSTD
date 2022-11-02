@@ -18,8 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // Use the Firebase library to configure APIs.
-        FirebaseConfiguration.shared.setLoggerLevel(.min)
-        FirebaseApp.configure()
+        //FirebaseConfiguration.shared.setLoggerLevel(.min)
+        //FirebaseApp.configure()
 
         window = UIWindow(frame: UIScreen.main.bounds)
         let mainController = DeviceDetailViewController() as UIViewController

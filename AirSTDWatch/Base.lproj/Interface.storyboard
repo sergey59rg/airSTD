@@ -126,22 +126,30 @@
                                         <label alignment="center" text="All" textAlignment="center" id="7EB-rR-cBQ"/>
                                         <group width="1" alignment="left" layout="vertical" radius="20" id="2I8-Il-8ac">
                                             <items>
-                                                <button width="1" alignment="center" title="+" id="F2b-ms-ZuG">
+                                                <button width="1" alignment="center" title="+" id="F2b-ms-ZuG" userLabel="Plus All Button">
+                                                    <gestureRecognizers>
+                                                        <longPressGestureRecognizer minimumPressDuration="0.0" id="bFD-Ya-Qb3">
+                                                            <connections>
+                                                                <action selector="plusAllPressGesture:" destination="cDx-Uo-VLg" id="21W-t7-76c"/>
+                                                            </connections>
+                                                        </longPressGestureRecognizer>
+                                                    </gestureRecognizers>
                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="font" type="system" pointSize="35"/>
-                                                    <connections>
-                                                        <action selector="plusAllButtonPressed" destination="cDx-Uo-VLg" id="NqQ-Ds-bjb"/>
-                                                    </connections>
                                                 </button>
                                                 <separator alignment="left" id="e4Z-xe-R1l">
                                                     <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </separator>
-                                                <button width="1" alignment="center" title="-" id="FaA-E9-LVj">
+                                                <button width="1" alignment="center" title="-" id="FaA-E9-LVj" userLabel="Minus All Button">
+                                                    <gestureRecognizers>
+                                                        <longPressGestureRecognizer minimumPressDuration="0.0" id="Nbb-Gc-NVs">
+                                                            <connections>
+                                                                <action selector="minusAllPressGesture:" destination="cDx-Uo-VLg" id="R9X-ff-MLF"/>
+                                                            </connections>
+                                                        </longPressGestureRecognizer>
+                                                    </gestureRecognizers>
                                                     <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="font" type="system" pointSize="35"/>
-                                                    <connections>
-                                                        <action selector="minusAllButtonPressed" destination="cDx-Uo-VLg" id="Lx9-we-2cp"/>
-                                                    </connections>
                                                 </button>
                                             </items>
                                             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -155,21 +163,29 @@
                                         <group width="1" alignment="left" layout="vertical" radius="20" id="PgY-dC-ang">
                                             <items>
                                                 <button width="1" alignment="center" title="+" id="AKQ-7Q-Whu">
+                                                    <gestureRecognizers>
+                                                        <longPressGestureRecognizer minimumPressDuration="0.0" id="S6O-4i-gOQ">
+                                                            <connections>
+                                                                <action selector="plusFrontPressGesture:" destination="cDx-Uo-VLg" id="cbB-Hz-Y3N"/>
+                                                            </connections>
+                                                        </longPressGestureRecognizer>
+                                                    </gestureRecognizers>
                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="font" type="system" pointSize="35"/>
-                                                    <connections>
-                                                        <action selector="plusFrontButtonPressed" destination="cDx-Uo-VLg" id="dFe-Hp-Chw"/>
-                                                    </connections>
                                                 </button>
                                                 <separator alignment="left" id="d2a-ib-RXb">
                                                     <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </separator>
                                                 <button width="1" alignment="center" title="-" id="78h-it-8m8">
+                                                    <gestureRecognizers>
+                                                        <longPressGestureRecognizer minimumPressDuration="0.0" id="Tc9-4r-smW">
+                                                            <connections>
+                                                                <action selector="minusFrontPressGesture:" destination="cDx-Uo-VLg" id="1oS-U7-N8x"/>
+                                                            </connections>
+                                                        </longPressGestureRecognizer>
+                                                    </gestureRecognizers>
                                                     <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="font" type="system" pointSize="35"/>
-                                                    <connections>
-                                                        <action selector="minusFrontButtonPressed" destination="cDx-Uo-VLg" id="vsP-dl-IxM"/>
-                                                    </connections>
                                                 </button>
                                             </items>
                                             <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -183,21 +199,29 @@
                                         <group width="1" alignment="left" layout="vertical" radius="20" id="JKs-DS-AAi">
                                             <items>
                                                 <button width="1" alignment="center" title="+" id="njQ-Y4-pBc">
+                                                    <gestureRecognizers>
+                                                        <longPressGestureRecognizer minimumPressDuration="0.0" id="KyG-yG-Bkw">
+                                                            <connections>
+                                                                <action selector="plusRearPressGesture:" destination="cDx-Uo-VLg" id="Go0-ar-5Yt"/>
+                                                            </connections>
+                                                        </longPressGestureRecognizer>
+                                                    </gestureRecognizers>
                                                     <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="font" type="system" pointSize="35"/>
-                                                    <connections>
-                                                        <action selector="plusRearButtonPressed" destination="cDx-Uo-VLg" id="nZv-wr-50C"/>
-                                                    </connections>
                                                 </button>
                                                 <separator alignment="left" id="dTg-pI-c4n">
                                                     <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </separator>
                                                 <button width="1" alignment="center" title="-" id="fkK-Z5-bpV">
+                                                    <gestureRecognizers>
+                                                        <longPressGestureRecognizer minimumPressDuration="0.0" id="ghi-tk-1rf">
+                                                            <connections>
+                                                                <action selector="minusRearPressGesture:" destination="cDx-Uo-VLg" id="xac-sx-40j"/>
+                                                            </connections>
+                                                        </longPressGestureRecognizer>
+                                                    </gestureRecognizers>
                                                     <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="font" type="system" pointSize="35"/>
-                                                    <connections>
-                                                        <action selector="minusRearButtonPressed" destination="cDx-Uo-VLg" id="jfB-55-JdC"/>
-                                                    </connections>
                                                 </button>
                                             </items>
                                             <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -210,11 +234,11 @@
                     </items>
                     <connections>
                         <outlet property="iconImage" destination="O3v-M1-XmQ" id="WPi-vL-Je6"/>
-                        <outlet property="minusAllButton" destination="FaA-E9-LVj" id="EQP-e0-L5C"/>
+                        <outlet property="minusAllButton" destination="FaA-E9-LVj" id="CYe-Lu-uwV"/>
                         <outlet property="minusFrontButton" destination="78h-it-8m8" id="VaM-Qd-ZJB"/>
                         <outlet property="minusRearButton" destination="fkK-Z5-bpV" id="Fja-XG-b6c"/>
                         <outlet property="nameLabel" destination="Dxb-dp-YPs" id="5L1-4R-Ipv"/>
-                        <outlet property="plusAllButton" destination="F2b-ms-ZuG" id="Zxn-av-Pxp"/>
+                        <outlet property="plusAllButton" destination="F2b-ms-ZuG" id="M8e-2Z-Mdt"/>
                         <outlet property="plusFrontButton" destination="AKQ-7Q-Whu" id="UNg-BY-HcU"/>
                         <outlet property="plusRearButton" destination="njQ-Y4-pBc" id="8aJ-pa-v2l"/>
                     </connections>

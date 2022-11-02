@@ -40,7 +40,11 @@ class DeviceInterfaceController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         // Configure interface objects here.
-    
+        //plusAllButton
+        //let tap = WKLongPresssGestureRecognizer()
+        let longPressGesture = WKLongPressGestureRecognizer()
+        longPressGesture.minimumPressDuration = 0
+
     }
     
     override func willActivate() {
@@ -63,55 +67,109 @@ class DeviceInterfaceController: WKInterfaceController {
         return context
     }
     
-    @IBAction func plusPressGesture(_ sender: WKLongPressGestureRecognizer) {
-        print("-->plusPressGesture\(sender)")
-    }
-    
-    @IBAction func minusPressGesture(_ sender: WKLongPressGestureRecognizer) {
-        print("-->minusPressGesture\(sender)")
-    }
-    
-    @IBAction func plusAllButtonPressed() {
-        print("plusAll")
-        if device != nil {
-            device?.control = [0, 4, 8, 0xc]
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                self.device?.control = [1, 5, 9, 0xd]
+    @IBAction func plusAllPressGesture(_ sender: AnyObject) {
+        guard let sender = sender as? WKLongPressGestureRecognizer else {
+            return
+        }
+        if sender.state == WKGestureRecognizerState.began {
+            print("-->plus all began")
+            if device != nil {
+                device?.control = [0, 4, 8, 0xc]
+            }
+        } else if sender.state == WKGestureRecognizerState.ended {
+            print("-->plus all end")
+            if device != nil {
+                device?.control = [1, 5, 9, 0xd]
             }
         }
     }
     
-    @IBAction func minusAllButtonPressed() {
-        print("minusAll")
-        if device != nil {
-            device?.control = [2, 6, 0xa, 0xe]
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                self.device?.control = [3, 7, 0xb, 0xf]
+    @IBAction func minusAllPressGesture(_ sender: AnyObject) {
+        guard let sender = sender as? WKLongPressGestureRecognizer else {
+            return
+        }
+        if sender.state == WKGestureRecognizerState.began {
+            print("-->minus all began")
+            if device != nil {
+                device?.control = [2, 6, 0xa, 0xe]
+            }
+        } else if sender.state == WKGestureRecognizerState.ended {
+            print("-->minus all end")
+            if device != nil {
+                device?.control = [3, 7, 0xb, 0xf]
+            }
+        }
+    }
+
+    @IBAction func plusFrontPressGesture(_ sender: AnyObject) {
+        guard let sender = sender as? WKLongPressGestureRecognizer else {
+            return
+        }
+        if sender.state == WKGestureRecognizerState.began {
+            print("-->plus front began")
+            if device != nil {
+                device?.control = [0, 4]
+            }
+        } else if sender.state == WKGestureRecognizerState.ended {
+            print("-->plus front end")
+            if device != nil {
+                device?.control = [1, 5]
             }
         }
     }
     
-    @IBAction func plusFrontButtonPressed() {
-        print("plusFront")
-        if device != nil {
-            device?.control = [0, 4]
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                self.device?.control = [1, 5]
+    @IBAction func minusFrontPressGesture(_ sender: AnyObject) {
+        guard let sender = sender as? WKLongPressGestureRecognizer else {
+            return
+        }
+        if sender.state == WKGestureRecognizerState.began {
+            print("-->minus front began")
+            if device != nil {
+                device?.control = [2, 6]
+            }
+        } else if sender.state == WKGestureRecognizerState.ended {
+            print("-->minus front end")
+            if device != nil {
+                device?.control = [3, 7]
             }
         }
     }
     
-    @IBAction func minusFrontButtonPressed() {
-        print("minusFront")
-        if device != nil {
-            device?.control = [2, 6]
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                self.device?.control = [3, 7]
+    @IBAction func plusRearPressGesture(_ sender: AnyObject) {
+        guard let sender = sender as? WKLongPressGestureRecognizer else {
+            return
+        }
+        if sender.state == WKGestureRecognizerState.began {
+            print("-->plus rear began")
+            if device != nil {
+                device?.control = [8, 0xc]
+            }
+        } else if sender.state == WKGestureRecognizerState.ended {
+            print("-->plus rear end")
+            if device != nil {
+                device?.control = [9, 0xd]
             }
         }
     }
     
-    @IBAction func plusRearButtonPressed() {
+    @IBAction func minusRearPressGesture(_ sender: AnyObject) {
+        guard let sender = sender as? WKLongPressGestureRecognizer else {
+            return
+        }
+        if sender.state == WKGestureRecognizerState.began {
+            print("-->minus rear began")
+            if device != nil {
+                device?.control = [0xa, 0xe]
+            }
+        } else if sender.state == WKGestureRecognizerState.ended {
+            print("-->minus rear end")
+            if device != nil {
+                device?.control = [0xb, 0xf]
+            }
+        }
+    }
+    
+    /*@IBAction func plusRearButtonPressed() {
         print("plusRear")
         if device != nil {
             device?.control = [8, 0xc]
@@ -129,7 +187,7 @@ class DeviceInterfaceController: WKInterfaceController {
                 self.device?.control = [0xb, 0xf]
             }
         }
-    }
+    }*/
     
     @IBAction func iconImagePressed() {
         print("icon")
